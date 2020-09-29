@@ -4,18 +4,26 @@ using System.Text;
 
 namespace fruitcalc.store
 {
-    public class FruitCollection : FruitData
+    public static class FruitDataFactory
     {
-        public string Name
+        public static Interfaces.FruitDataInterface GetFruitDataInstance(string infoName)
         {
-            get
+            /*
+             * Today each fruit data object is doing the same thing.  
+             * If we need a new class that adheres to FruitInterface we can implement it and return it here
+             */
+            switch (infoName.ToLower())
             {
-                return base.GetName();
+                case "pricing":
+                    return new FruitData("pricing");
+                case "promotions":
+                    return new FruitData("promotions");
+                case "basket":
+                    return new FruitData("basket");
+                default:
+                    throw new Exception(string.Concat("Fruit information type not available: ", infoName));
+
             }
         }
-        public FruitCollection(string infoName) : base(infoName)
-        {
-        }
-      
     }
 }

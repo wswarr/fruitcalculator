@@ -4,7 +4,7 @@ using System.Text;
 
 namespace fruitcalc.store.Interfaces
 {
-    public interface FruitInterface
+    public interface FruitDataInterface
     {
         string GetName();
         Dictionary<string, decimal> InternalCollection();

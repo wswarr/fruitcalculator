@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace fruitcalc.store
 {
-    public abstract class FruitData : Interfaces.FruitInterface
+    public class FruitData : Interfaces.FruitDataInterface
     {
         Dictionary<string, decimal> internalCollection = new Dictionary<string, decimal>();
         internal string infoName = string.Empty;

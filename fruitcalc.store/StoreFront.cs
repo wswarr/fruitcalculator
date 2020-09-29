@@ -20,9 +20,9 @@ namespace fruitcalc.store
 
             Console.WriteLine(string.Concat("Calculating input: ", wholeInput));
 
-            FruitInterface pricing = new FruitCollection("pricing");
-            FruitInterface promotions = new FruitCollection("promotions");
-            FruitInterface basket = new FruitCollection("basket");
+            FruitDataInterface pricing = FruitDataFactory.GetFruitDataInstance("pricing");
+            FruitDataInterface promotions = FruitDataFactory.GetFruitDataInstance("promotions");
+            FruitDataInterface basket = FruitDataFactory.GetFruitDataInstance("basket");
 
             foreach (string sectionPart in sections)
             {
@@ -35,19 +35,16 @@ namespace fruitcalc.store
                 }
                 if (section.StartsWith("promotions", StringComparison.CurrentCultureIgnoreCase))
                 {
-                    Console.WriteLine(string.Concat("Parsing: ", ((FruitCollection)promotions).Name));
                     promotions.ParseSection(section.Remove(0, dataIndex));
                 }
                 else
                 if (section.StartsWith("basket", StringComparison.CurrentCultureIgnoreCase))
                 {
-                    Console.WriteLine(string.Concat("Parsing: ", ((FruitCollection)basket).Name));
                     basket.ParseSection(section.Remove(0, dataIndex));
                 }
                 else
                 {
                     //check for "input"?  If so, add handling of : here also
-                    Console.WriteLine(string.Concat("Parsing: ", ((FruitCollection)pricing).Name));
                     pricing.ParseSection(section);
                 }
             }
@@ -62,9 +59,9 @@ namespace fruitcalc.store
 
         private decimal runCalculations
             (
-                FruitInterface pricing,
-                FruitInterface promotions,
-                FruitInterface basket
+                FruitDataInterface pricing,
+                FruitDataInterface promotions,
+                FruitDataInterface basket
             )
         {
             decimal total = 0;
