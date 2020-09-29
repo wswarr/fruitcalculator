@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "fruitcalc": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Oranges – $10; Apples- $5 ; Promotions: No; Basket: Oranges - 5, Apples 1\" \"Oranges – $10; Apples- $5 ; Promotions: Oranges – 0.5;  Basket: Oranges - 5, Apples 1\""
+    }
+  }
+}
