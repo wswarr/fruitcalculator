@@ -1,6 +1,9 @@
 # fruitcalculator
 
-This test is super simple for a reason.  The exercise is intended to allow the interviewee the freedom to showcase their skills.  So if one is a master at design/architecture I would expect properly used design patterns with an intended set of functionality, proper identification and use of the domain, and abstractions that allow flexible algorithm control of key business logic.  The solution needs to be written in C#. The project type, input and output it’s at the developer’s choice. Please limit the time spent on this to one hour. We do not want them to spend too much time on this.
+This test is super simple for a reason.  The exercise is intended to allow the interviewee the freedom to showcase their skills.  So if one is a master at design/architecture I would expect 
+properly used design patterns with an intended set of functionality, proper identification and use of the domain, and abstractions that allow flexible algorithm control of key business logic.  
+The solution needs to be written in C#. The project type, input and output it’s at the developer’s choice. Please limit the time spent on this to one hour. We do not want them to spend too much 
+time on this.
 
 One more pointer that you could use to help them is please do not create a fruit class, orange class , etc.
 _______________________________
@@ -22,6 +25,7 @@ Input : Oranges – $10; Apples- $5 ; Promotions: Oranges – 0.5;  Basket: Oranges 
 Output: Total price= 30
 
 
-
+40
 -
+150
 –

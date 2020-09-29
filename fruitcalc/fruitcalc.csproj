@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\fruitcalc.store\fruitcalc.store.csproj" />
+  </ItemGroup>
+
 </Project>
