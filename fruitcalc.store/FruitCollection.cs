@@ -10,7 +10,7 @@ namespace fruitcalc.store
         {
             get
             {
-                return infoName;
+                return base.GetName();
             }
         }
         public FruitCollection(string infoName) : base(infoName)

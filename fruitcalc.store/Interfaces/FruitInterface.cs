@@ -6,6 +6,7 @@ namespace fruitcalc.store.Interfaces
 {
     public interface FruitInterface
     {
+        string GetName();
         Dictionary<string, decimal> InternalCollection();
         void ParseSection(string section);
     }

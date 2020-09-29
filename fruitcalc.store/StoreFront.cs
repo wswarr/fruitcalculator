@@ -35,16 +35,19 @@ namespace fruitcalc.store
                 }
                 if (section.StartsWith("promotions", StringComparison.CurrentCultureIgnoreCase))
                 {
+                    Console.WriteLine(string.Concat("Parsing: ", ((FruitCollection)promotions).Name));
                     promotions.ParseSection(section.Remove(0, dataIndex));
                 }
                 else
                 if (section.StartsWith("basket", StringComparison.CurrentCultureIgnoreCase))
                 {
+                    Console.WriteLine(string.Concat("Parsing: ", ((FruitCollection)basket).Name));
                     basket.ParseSection(section.Remove(0, dataIndex));
                 }
                 else
                 {
                     //check for "input"?  If so, add handling of : here also
+                    Console.WriteLine(string.Concat("Parsing: ", ((FruitCollection)pricing).Name));
                     pricing.ParseSection(section);
                 }
             }

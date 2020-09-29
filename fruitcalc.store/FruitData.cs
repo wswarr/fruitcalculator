@@ -12,6 +12,11 @@ namespace fruitcalc.store
             this.infoName = infoName.ToLower();
         }
 
+        public string GetName()
+        {
+            return this.infoName;
+        }
+
         public Dictionary<string, decimal> InternalCollection()
         {
             return internalCollection;
