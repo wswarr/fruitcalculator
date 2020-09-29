@@ -125,8 +125,6 @@ namespace fruitcalc
                 sectionList.Add(details[0].Trim().ToLower(), convertedValue);
 
             }
-
         }
-
     }
 }
